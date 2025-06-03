@@ -12,7 +12,6 @@ app = Flask(__name__)
 
 
 client = MongoClient()
-# print(client.list_database_names())
 portfolio_sims_db = client["portfolio_sims"]
 sims_col = portfolio_sims_db["sims"]
  
@@ -199,7 +198,6 @@ def check_sim():
         results = {"success": 1}
 
     return jsonify({"results": results})
-
 
 
 
